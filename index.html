@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--p5js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/addons/p5.dom.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Evolutionary steering</title>
+</head>
+<body>
+    <div id="page">
+        <!--left-->
+        <div id="canvas-holder">
+
+        </div>
+        <!--right-->
+        <div id="scroll-container">
+
+            <div id="right">
+                <div class="input-box">
+                    <p>food nutrition:</p>
+                    <input id="food-nutrition" type="number" value="0.3">
+                </div>
+                <div class="input-box">
+                    <p>poison nutrition:</p>
+                    <input id="poison-nutrition" type="number" value="-2.0">
+                </div>
+                <div class="input-box">
+                    <p>hunger rate:</p>
+                    <input id="hunger-rate" type="number" value="0.008">
+                </div>
+                <div class="input-box">
+                    <p>clone chance(0,1):</p>
+                    <input id="clone-chance" type="number" value="0.05">
+                </div>
+                <div class="input-box">
+                    <p>food spawn(0,1):</p>
+                    <input id="food-spawn-rate" type="number" value="0.1">
+                </div>
+                <button id="update-button">update</button>
+                
+                <p style="text-align: center;">click anywhere to spawn</p>
+                
+                <div id="custom-spawn-options">
+                    <div>
+                        <input id="random-spawn" type="checkbox"/><label for="random-spawn"> Random Spawn</label>
+                    </div>
+                    <div>
+                        <input id="custom-spawn" type="checkbox"/><label for="custom-spawn"> Custom Spawn</label>
+                    </div>
+    
+                    <p>custom spawn options:</p>
+                    <div class="input-box">
+                        <p>food attract:</p>
+                        <input id="food-attract" type="number" value="1.0">
+                    </div>
+                    <div class="input-box">
+                        <p>poison attract:</p>
+                        <input id="poison-attract" type="number" value="-1.0">
+                    </div>
+                    <div class="input-box">
+                        <p>food scan:</p>
+                        <input id="food-scan" type="number" value="300.0">
+                    </div>
+                    <div class="input-box">
+                        <p>poison scan:</p>
+                        <input id="poison-scan" type="number" value="30.0">
+                    </div>
+                    <div class="input-box">
+                        <p>max speed:</p>
+                        <input id="max-speed" type="number" value="4.0">
+                    </div>
+                    <div class="input-box">
+                        <p>acceleration(0,1):</p>
+                        <input id="acceleration" type="number" value="0.5">
+                    </div>
+                </div>
+
+                <div>
+                    <input id="debug-active" type="checkbox"/><label for="debug-bar"> Debug</label>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <script src="vehicle.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
