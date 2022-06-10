@@ -111,7 +111,16 @@ input[type=number] {
     scrollbar-width: none;  /* Firefox */
 } 
 
+.forward-link-icon{
+    object-fit: contain;
+    transition: all .2s ease-in-out;  
+    width: 10%;
 
+}
+.forward-link-icon:hover{
+    transform: scale(1.1);
+
+}
 
 
 
